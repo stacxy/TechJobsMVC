@@ -42,7 +42,7 @@ namespace TechJobsMVC.Controllers
             ViewBag.columns = ListController.ColumnChoices;
 
 
-            return Redirect("/Search/Results");
+            return View("Index");
         }
     }
 }
