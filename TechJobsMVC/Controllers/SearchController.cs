@@ -27,7 +27,7 @@ namespace TechJobsMVC.Controllers
         public IActionResult Results(string searchType, string searchTerm)
         {
             List<Job> jobs;
-            if (searchType.ToLower().Equals("all") || searchTerm == null)
+            if (searchType.ToLower().Equals("all") && searchTerm == null)
             {
                 jobs = JobData.FindAll();
                 ViewBag.title = "All Jobs";
