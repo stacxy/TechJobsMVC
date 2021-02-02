@@ -3,14 +3,15 @@
 
     <h1>@ViewBag.title</h1>
 
-    <form action="/Search/Results" method="post">
+    @*autocomplete and viewbag. searchtype : attempt at bonus method 1*@
+    <form action="/Search/Results" method="post"autocomplete="on">
         <h2>Search by:</h2>
 
         <p>
             @foreach (var column in ViewBag.columns)
             {
                 <span>
-                    <input type="radio" name="searchType" id="@column.Key" value="@column.Key" checked="@column.Key == 'all'" />
+                    <input type="radio" name="searchType" id="@column.Key" value="@column.Key" checked="@column.Key == @ViewBag.searchType" />
                     <label for="@column.Key">@column.Value</label>
                 </span>
             }
