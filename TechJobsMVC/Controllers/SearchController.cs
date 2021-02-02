@@ -40,7 +40,7 @@ namespace TechJobsMVC.Controllers
             ViewBag.searchType = searchType;
 
 
-            return View("Index", jobs);
+            return View("Index");
         }
     }
 }
